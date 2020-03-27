@@ -2,10 +2,13 @@
 
 namespace App;
 
+use App\Traits\HasSalary;
 use Illuminate\Database\Eloquent\Model;
 
 class PlayerContract extends Model
 {
+    use HasSalary;
+
     protected $fillable = [
         'from',
         'wage',

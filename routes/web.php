@@ -45,6 +45,7 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('{club}/players', 'SquadController@show')->name('show_club_players');
     Route::get('{club}/{squad}/lineup', 'LineupController@edit')->name('edit_lineup');
     Route::post('/update-lineup/{lineup}', 'LineupController@update')->name('update_lineup');
+    Route::get('{club}/finance', 'FinanceController@show')->name('show_finance');
 
     Route::get('/apply-for-job/{club}', 'ManagerContractController@create')->middleware('auth')->name('apply_for_job');
     Route::post('/apply-for-job', 'ManagerContractController@store')->middleware('auth')->name('send_job_application');

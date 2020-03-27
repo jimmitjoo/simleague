@@ -22,6 +22,11 @@ class Person extends Model
         'important_matches',
     ];
 
+    public function transactions()
+    {
+        return $this->morphToMany(Transaction::class, 'payable');
+    }
+
     public function club()
     {
         return $this->hasOneThrough(Club::class, PlayerContract::class, 'person_id', 'id', 'id', 'club_id');

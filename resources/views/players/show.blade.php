@@ -27,7 +27,7 @@
                             {{ __(':Age years old', ['Age' => $person->age]) }}
                         </td>
                         <td>
-                            {{ __(':Wage per month until :Until', ['Wage' => $person->contract->wage, 'Until' => date('j/n Y', strtotime($person->contract->until))]) }}
+                            {{ __(':Wage per week until :Until', ['Wage' => $person->contract->wage, 'Until' => date('j/n Y', strtotime($person->contract->until))]) }}
                         </td>
                     </tr>
                 </table>

@@ -34,6 +34,11 @@ class Club extends Model
         return 'slug';
     }
 
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
 
     public function getClubColorsAttribute()
     {
