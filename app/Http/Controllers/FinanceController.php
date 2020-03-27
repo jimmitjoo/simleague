@@ -10,6 +10,9 @@ class FinanceController extends Controller
     public function show($locale, Club $club)
     {
         $transactions = $club->transactions()->paginate();
-        return view('finance.show')->with(['club' => $club, 'transactions' => $transactions]);
+
+        $lastWeekCosts = $club->transactions()->whereDate('created_at', '>', now()->subWeek())->sum('sum');
+
+        return view('finance.show')->with(['club' => $club, 'transactions' => $transactions, 'lastWeekCosts' => $lastWeekCosts]);
     }
 }

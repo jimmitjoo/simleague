@@ -12,7 +12,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
 
-                <h2>{{ $club->balance }}</h2>
+                <h2>Balance: {{ $club->balance }}</h2>
+
+                <strong>Last week costs: {{ $lastWeekCosts }}</strong>
 
                 <ul>
                     @foreach($transactions as $transaction)
