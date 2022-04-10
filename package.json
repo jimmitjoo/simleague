@@ -28,7 +28,7 @@
         "sass-loader": "^7.1.0",
         "serialize-javascript": ">=3.1.0",
         "acorn": ">=6.4.1",
-        "minimist": ">=1.2.2"
+        "minimist": ">=1.2.6"
     },
     "dependencies": {
         "flag-icon-css": "^3.3.0",
